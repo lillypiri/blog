@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
-  resources :articles
+
+  namespace :admin do
+    resources :articles
+    root 'articles#index'
+  end
+
+  resources :articles, only: [:show, :index]
   root 'articles#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

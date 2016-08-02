@@ -1,11 +1,10 @@
 body
   {
     color: #566b78;
-    background-color: #eee;
+    background-color: #ffc4c4;
     margin: 0 auto;
     max-width: 50em;
-
-    font-family: "Georgia", sans-serif;
+    font-family: 'Space Mono', monospace;
     line-height: 1.5;
     padding: 4em 1em;
 
@@ -15,6 +14,7 @@ body
 h1,
 h2,
   strong {
+    font-size: 30px;
     color: #333;
   }
 
@@ -26,4 +26,26 @@ h2 {
 
 a {
   color: #e81c4f;
+}
+
+p {
+  font-size: 19px;
+  color: #333;
+}
+
+.header {
+  text-align: center;
+  padding-bottom: 40px;
+  .header-img {
+    height: 250px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .nav {
+    font-size: 25px;
+    a {
+    }
+  }
+
 }
