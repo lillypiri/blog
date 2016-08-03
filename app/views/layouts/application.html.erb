@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
 </head>
 <body>
 
@@ -15,11 +16,13 @@
   <% end %>
 
   <div class="nav">
-    <a href="/about">About</a>
+    <a href="/articles/8">About</a>
     &#10084;
-    <a href="/archive">Archive</a>
+    <%= link_to root_path do %>
+      Archive
+    <% end %>
     &#10084;
-    <a href="/shop">Shop</a>
+    <a href="https://lillypiri.etsy.com">Shop</a>
   </div>
 </div>
 

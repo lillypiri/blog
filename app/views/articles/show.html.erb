@@ -9,3 +9,10 @@
     <%= @article.text.html_safe %>
   </p>
 </div>
+
+<div class="footer">
+  <%= link_to root_path do %>
+    <%= image_tag "coffee.png", class: "footer-img" %>
+    <p> If you just learned something awesome, or were thoroughly entertained, you can now toss a chunk of change in my virtual tip jar to buy me a coffee! </p>
+  <% end %>
+</div>

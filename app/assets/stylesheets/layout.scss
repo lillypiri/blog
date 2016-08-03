@@ -2,8 +2,10 @@ body
   {
     color: #fb6565;
     background-color: #ffc4c4;
+    background-image: image-url("background.png");
+    background-size: 200px 250px;
+    background-repeat: repeat;
     margin: 0 auto;
-    max-width: 50em;
     font-family: 'Space Mono', monospace;
     line-height: 1.5;
     padding: 40px 10px;
@@ -44,7 +46,8 @@ p {
   padding-bottom: 40px;
   color: #fb6565;
   .header-img {
-    height: 250px;
+    width: 350px;
+    max-width: 100%;
   }
   h1 {
     font-size: 40px;
@@ -55,4 +58,13 @@ p {
     }
   }
 
+}
+
+.footer {
+  text-align: center;
+  padding-bottom: 20px;
+  .footer-img {
+    width: 300px;
+    max-width: 100%;
+  }
 }
