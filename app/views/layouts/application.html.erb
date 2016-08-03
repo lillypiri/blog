@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
+  <title>Piri Piri - Code and Art and Illustration</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,8 +9,10 @@
 <body>
 
 <div class="header">
-  <%= image_tag "header.png", class: "header-img" %>
-  <h1> Piri Piri </h1>
+  <%= link_to root_path do %>
+    <%= image_tag "header.png", class: "header-img" %>
+    <h1> Piri Piri </h1>
+  <% end %>
 
   <div class="nav">
     <a href="/about">About</a>
