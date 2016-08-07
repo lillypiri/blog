@@ -1,12 +1,12 @@
 class Admin::ArticlesController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
     @articles = Article.all
   end
 
   def show
-    @article = Article.find(params[:id])
+    @article = Article.find_by slug: params[:id]
   end
 
   def new
@@ -14,7 +14,7 @@ class Admin::ArticlesController < ApplicationController
   end
 
   def edit
-    @article = Article.find(params[:id])
+    @article = Article.find_by slug: params[:id]
   end
 
   def create
@@ -28,7 +28,7 @@ class Admin::ArticlesController < ApplicationController
   end
 
   def update
-    @article = Article.find(params[:id])
+    @article = Article.find_by slug: params[:id]
 
     if @article.update(article_params)
       redirect_to admin_article_path(@article)
@@ -38,7 +38,7 @@ class Admin::ArticlesController < ApplicationController
   end
 
   def destroy
-    @article = Article.find(params[:id])
+    @article = Article.find_by slug: params[:id]
     @article.destroy
 
     redirect_to admin_articles_path
