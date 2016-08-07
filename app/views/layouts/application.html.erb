@@ -8,7 +8,9 @@
   <meta content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
 </head>
 <body>
-
+<% if user_signed_in? %>
+  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+<% end %>
 <div class="header">
   <%= link_to root_path do %>
     <%= image_tag "header.png", class: "header-img" %>
@@ -29,6 +31,10 @@
 
 
 <%= yield %>
+
+<div class="copyright">
+  &copy; 2016 <a href="https://lillypiri.com">Lilly Piri</a>
+</div>
 
 </body>
 </html>
