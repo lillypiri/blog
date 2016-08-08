@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   end
 
   resources :articles, only: [:show, :index]
+  get "about", to: "pages#about"
   root 'articles#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
