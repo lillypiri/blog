@@ -11,16 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160807053300) do
+ActiveRecord::Schema.define(version: 20160808072916) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
     t.text     "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.string   "slug"
+    t.datetime "published_at"
   end
 
+  add_index "articles", ["published_at"], name: "index_articles_on_published_at"
   add_index "articles", ["slug"], name: "index_articles_on_slug"
 
   create_table "users", force: :cascade do |t|

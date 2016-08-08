@@ -2,7 +2,7 @@ class Admin::ArticlesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @articles = Article.all
+    @articles = Article.order(published_at: :desc)
   end
 
   def show
@@ -46,6 +46,6 @@ class Admin::ArticlesController < ApplicationController
 
   private
     def article_params
-      params.require(:article).permit(:title, :text)
+      params.require(:article).permit(:title, :text, :published_at)
     end
 end
