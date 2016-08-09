@@ -13,6 +13,6 @@ class Article < ActiveRecord::Base
   protected
 
   def set_slug
-    self.slug = self.title.downcase.gsub(' ', '-').gsub(/[^a-zA-Z\-]+/, '')
+    self.slug = self.title.downcase.gsub(' ', '-').gsub(/[^a-zA-Z\-0-9]+/, '')
   end
 end

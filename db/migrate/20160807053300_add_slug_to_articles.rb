@@ -6,7 +6,7 @@ class AddSlugToArticles < ActiveRecord::Migration
     Article.reset_column_information
 
     Article.all.each do |article|
-      article.update slug: article.title.downcase.gsub(' ', '-').gsub(/[^a-zA-Z\-]+/, '')
+      article.update slug: article.title.downcase.gsub(' ', '-').gsub(/[^a-zA-Z\-0-9]+/, '')
     end
   end
 
