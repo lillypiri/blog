@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails', '4.2.8'
 gem 'pg', '~> 0.15', group: :production
 gem 'rails_12factor', group: :production
 # Use sqlite3 as the database for Active Record
