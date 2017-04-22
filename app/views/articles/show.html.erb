@@ -3,10 +3,12 @@
   <h1>
     <%= @article.title %>
   </h1>
-  <p>
+  <div class="date">
     <%= @article.published_at.strftime("%-d %B, %Y") %>
-  </p>
+  </div>
+  <div class="content-body">
   <%= @article.text.html_safe %>
+  </div>
 </div>
 
 <div class="footer">
